@@ -1,12 +1,7 @@
 import { SideBar } from '../Wrapper/SideBar/SideBar'
 import { MenuStyle } from './style'
 
-interface MenuProps {
-	isOpen: boolean
-	setMenuIsOpen: () => void
-}
-
-export function Menu({ isOpen, setMenuIsOpen }: MenuProps) {
+export function Menu({ isOpen, setMenuIsOpen }) {
 	return (
 		<>
 			<MenuStyle />

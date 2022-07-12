@@ -15,9 +15,13 @@ export const CommentStyle = styled.div`
       background-color: var(--gray-700);
       border-radius: 8px;
       padding: 1rem;
+      p{
+        margin-top: 1rem;
+        color: var(--gray-300);
+      }
       header{
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: space-between;
         .author-and-time{
           display: flex;
@@ -49,6 +53,33 @@ export const CommentStyle = styled.div`
           }
         }
       }
-    }
+    } 
+    footer{
+        margin-top: 1rem;
+        button{
+          background-color: transparent;
+          border: 0;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          transition: all 0.5s ;
+          color: var(--gray-400);
+          svg{
+            margin-right: 0.5rem;
+          }
+          path{
+            transition: fill 0.5s ;
+          }
+          span::after{
+            padding: 0 0.2rem;
+          }
+          &:hover{
+            path{
+              fill: var(--green-300);
+            }
+            color: var(--green-300);
+          }
+        }
+      }
   }
 `

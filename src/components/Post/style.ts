@@ -57,11 +57,15 @@ export const PostStyle = styled.article`
         font-weight: bold;
         cursor: pointer;
         transition: background-color 0.1s ;
-        &:hover{
+        &:not(:disabled):hover{
           background-color: var(--green-300);
         }
         &:focus{
           box-shadow: 0 0 0 2px red;
+        }
+        &:disabled{
+          opacity: 0.7;
+          cursor: not-allowed;
         }
       } 
     }
@@ -85,13 +89,6 @@ export const PostStyle = styled.article`
       display: flex;
       align-items: center;
       gap: 1rem;
-      img{
-        width: calc(3rem + 12px);
-        height: calc(3rem + 12px);
-        border-radius: 8px;
-        border: 4px solid var(--gray-800);
-        outline: 2px solid var(--green-500);
-      }
       .author-info{
         display: flex;
         flex-flow: column;
