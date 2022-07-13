@@ -3,21 +3,21 @@ import { Avatar } from '../Avatar/Avatar'
 import { CommentStyle } from './styles'
 
 interface commentProps {
-	content: []
-	deleteCommentFunction: () => void
+	content: string
+	deleteCommentFunction: (comment: string) => void
 }
 
 export function Comment({ content, deleteCommentFunction }: commentProps) {
 	const [likeCount, setLikeCount] = useState(0)
 
 	function handleLikeComment() {
-		setLikeCount(likeCount + 1)
-	}
-
-	function handleDeleteComment() {
 		setLikeCount((state) => {
 			return state + 1
 		})
+	}
+
+	function handleDeleteComment() {
+		deleteCommentFunction(content)
 	}
 
 	return (
